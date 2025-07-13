@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.3 on darwin)" generated="2025-07-13T18:14:09.109669" rpa="false" schemaversion="5">
+<suite id="s1" name="testCase" source="/Users/kwangncp/Documents/git/QA_Assignments/testCase.robot">
+<test id="s1-t1" name="Search" line="6">
+<kw name="accessPortal" owner="Keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-13T18:14:09.270600" level="INFO">Opening browser 'chrome' to base url 'https://merkle.capital'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-13T18:14:09.270408" elapsed="13.231872"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${close_popUp}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-13T18:14:22.503520" elapsed="0.026161"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-13T18:14:22.530054" level="INFO">Clicking element '//*[contains(@class, 'flex items-center justify-center')]//button[contains(@class, 'items-center') and @type='button' and contains(text(), 'ปิด')]'.</msg>
+<arg>${close_popUp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-13T18:14:22.529844" elapsed="0.060344"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-13T18:14:24.592541" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-13T18:14:22.590342" elapsed="2.002388"/>
+</kw>
+<status status="PASS" start="2025-07-13T18:14:09.269904" elapsed="15.323070"/>
+</kw>
+<status status="PASS" start="2025-07-13T18:14:09.269514" elapsed="15.323916"/>
+</test>
+<status status="PASS" start="2025-07-13T18:14:09.110469" elapsed="15.483574"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testCase" id="s1" pass="1" fail="0" skip="0">testCase</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-13T18:14:09.269040" level="WARN">Imported library '/Users/kwangncp/Documents/git/QA_Assignments/wrapper.py' contains no keywords.</msg>
+</errors>
+</robot>
