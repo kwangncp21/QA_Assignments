@@ -1,77 +1,45 @@
 *** Settings ***
 Resource   Variable.robot
-# Resource   wrapper.py
 library    wrapper.py
 
 *** Keywords ***
-
-accessPortal
+Access portal
     Open Browser    ${url}    ${browser}
-    Wait Until Element Is Visible    ${close_popUp} 
+    Click Element    ${managecookie}
     Click Element    ${close_popUp}
+    Click Element    ${profile}
+    Click Element    ${profileLogin}
+    # sleep  1
     # Capture Page Screenshot
-    sleep  2
 
+Verify forgot password function is enable
+    Wait Until Element Is visible    ${forgotButton}
+    Click Element    ${forgotButton}
+    sleep  1
+    # Input Text    ${usernamePath}    ${incorrectEmail}
+    # Click Element    ${confirmUser}
 
-# login success
-#     Open Browser    ${url}     ${browser}
-#     Click Element  class:navLogin
-#     Click Element   ${usernametext_field}   
-#     Input Text    ${usernametext_field}   ${username}
-#     Click Element  id:password
-#     Input Text  id:password   ${password}
-#     Click Element  id:loginbtn
-#     Wait Until Page Contains  state: 
-#     close browser
+Input incorrect user
+    # Wait Until Element Is visible    ${usernamePath}
+    Input Text    ${usernamePath}    ${incorrectEmail}
+    Click Element    ${confirmUser}
+    Wait Until Element Is visible    ${userNotfound_path}    timeout=10s
+    # Wait Until Page Contains    ${OTP_PopupSuccess_path}    timeout=10s
+    Capture Page Screenshot
 
-# login fail 1
-#     Open Browser     ${url}     ${browser}
-#     Click Element  class:navLogin
-#     Click Element   ${usernametext_field}
-#     Input Text    ${usernametext_field}   ${username1}
-#     Click Element  id:password
-#     Input Text  id:password   ${password1}
-#     Click Element  id:loginbtn
-#     Alert Should Be Present   Email or password Not match
-#     close browser
+Input correct user with OTP
+    # Wait Until Element Is Visible    ${usernamePath}
+    Input Text    ${usernamePath}    ${correctEmail}
+    Click Element    ${confirmUser}
+    # Wait Until Element Contains    ${OTP_PopupSuccess_path}    ทำการส่ง OTP สำเร็จ    timeout=10s
+    Wait Until Element Is visible    ${OTP_PopupSuccess_path}    timeout=10s
+    Sleep    1
+    # Wait Until Element Is visible    ${OTP_PopupSuccess_path}
+    Capture Page Screenshot
 
-
-# login fail 2
-#     Open Browser     ${url}     ${browser}
-#     Click Element  class:navLogin
-#     Click Element   ${usernametext_field}
-#     Input Text    ${usernametext_field}   ${username2}
-#     Click Element  id:password
-#     Input Text  id:password   ${password2}
-#     Click Element  id:loginbtn
-#     Alert Should Be Present   Username or password Not match
-#     close browser
-
-# login fail 3
-#     Open Browser     ${url}     ${browser}
-#     Click Element  class:navLogin
-#     Click Element   ${usernametext_field} 
-#     Input Text    ${usernametext_field}   ${username3}
-#     Click Element  id:password
-#     Input Text  id:password   ${password3}
-#     Click Element  id:loginbtn
-#     Alert Should Be Present   Username or password Not match
-#     close browser
-    
-# login fail 7
-#      Open Browser     ${url}     ${browser}
-#     Click Element  class:navLogin
-#     Click Element   ${usernametext_field} 
-#     Input Text    ${usernametext_field}   ${username7}
-#     Click Element  id:password
-#     Input Text  id:password   ${password7}
-#     Click Element  id:loginbtn
-#     Alert Should Be Present    This account didn't register yet
-#     close browser
-
-# login fail 8   
-#     Open Browser     ${url}     ${browser}
-#     Click Element  class:navLogin
-#     Click Element  id:loginbtn
-#     sleep  4
-#     close browser
+Input correct user with OTP overload
+    Input Text    ${usernamePath}    ${correctEmail}
+    Click Element    ${confirmUser}
+    Wait Until Element Is visible    ${OTP_PopupError_path}    timeout=10s
+    sleep  1
+    Capture Page Screenshot
