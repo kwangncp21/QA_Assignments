@@ -1,109 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.3 on darwin)" generated="2025-07-14T17:38:45.981287" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.3 on darwin)" generated="2025-07-14T17:51:48.469415" rpa="false" schemaversion="5">
 <suite id="s1" name="testCase" source="/Users/kwangncp/Documents/git/QA_Assignments/testCase.robot">
 <test id="s1-t1" name="TC01_Verify forgot password function not allow permission for incorrect user" line="10">
 <kw name="Access portal" owner="Keyword">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-14T17:38:46.125406" level="INFO">Opening browser 'chrome' to base url 'https://merkle.capital'.</msg>
+<msg time="2025-07-14T17:51:48.609888" level="INFO">Opening browser 'chrome' to base url 'https://merkle.capital'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-14T17:38:46.125263" elapsed="4.825357"/>
+<status status="PASS" start="2025-07-14T17:51:48.609737" elapsed="4.141761"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-07-14T17:38:50.951534" level="INFO">Clicking element '//div[contains(@class, 't-reg-row justify-sm-end justify-md-end justify-space-around')]//button[contains(@class, 'v-btn v-btn--text theme--light v-size--default')]//span[contains(@class, 'v-btn__content') and contains(text(), 'ยอมรับ')]'.</msg>
+<msg time="2025-07-14T17:51:52.752321" level="INFO">Clicking element '//div[contains(@class, 't-reg-row justify-sm-end justify-md-end justify-space-around')]//button[contains(@class, 'v-btn v-btn--text theme--light v-size--default')]//span[contains(@class, 'v-btn__content') and contains(text(), 'ยอมรับ')]'.</msg>
 <arg>${managecookie}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-14T17:38:50.951124" elapsed="0.692506"/>
+<status status="PASS" start="2025-07-14T17:51:52.751905" elapsed="0.594225"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-07-14T17:38:51.643944" level="INFO">Clicking element '//*[contains(@class, 'flex items-center justify-center')]//button[contains(@class, 'items-center') and @type='button' and contains(text(), 'ปิด')]'.</msg>
+<msg time="2025-07-14T17:51:53.346412" level="INFO">Clicking element '//*[contains(@class, 'flex items-center justify-center')]//button[contains(@class, 'items-center') and @type='button' and contains(text(), 'ปิด')]'.</msg>
 <arg>${close_popUp}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-14T17:38:51.643770" elapsed="0.086492"/>
+<status status="PASS" start="2025-07-14T17:51:53.346267" elapsed="0.049533"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-07-14T17:38:51.730557" level="INFO">Clicking element '//*[contains(@class, 'w-[30px] h-[30px] ease-in-out duration-200 absolute top-0 right-0 visible opacity-100')]'.</msg>
+<msg time="2025-07-14T17:51:53.396074" level="INFO">Clicking element '//*[contains(@class, 'w-[30px] h-[30px] ease-in-out duration-200 absolute top-0 right-0 visible opacity-100')]'.</msg>
 <arg>${profile}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-14T17:38:51.730393" elapsed="0.038449"/>
+<status status="PASS" start="2025-07-14T17:51:53.395921" elapsed="0.033662"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-07-14T17:38:51.769102" level="INFO">Clicking element '//*[contains(@class, 'flex items-center justify-between border-b border-[rgba(104,115,133,0.2)]')]//div[contains(@class, 'flex items-center py-2.5')]'.</msg>
+<msg time="2025-07-14T17:51:53.429841" level="INFO">Clicking element '//*[contains(@class, 'flex items-center justify-between border-b border-[rgba(104,115,133,0.2)]')]//div[contains(@class, 'flex items-center py-2.5')]'.</msg>
 <arg>${profileLogin}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-14T17:38:51.768960" elapsed="0.037107"/>
+<status status="PASS" start="2025-07-14T17:51:53.429697" elapsed="0.038459"/>
 </kw>
-<status status="PASS" start="2025-07-14T17:38:46.124849" elapsed="5.681346"/>
+<status status="PASS" start="2025-07-14T17:51:48.609335" elapsed="4.858963"/>
 </kw>
 <kw name="Verify forgot password function is enable" owner="Keyword">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${forgotButton}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-07-14T17:38:51.806777" elapsed="0.221843"/>
+<status status="PASS" start="2025-07-14T17:51:53.468811" elapsed="0.222035"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-07-14T17:38:52.028883" level="INFO">Clicking element '//div[contains(@class, 'flex') and contains(@class, 'justify-between')]//a[contains(@class, 'underline') and @href="/invest/forget-password"]'.</msg>
+<msg time="2025-07-14T17:51:53.691103" level="INFO">Clicking element '//div[contains(@class, 'flex') and contains(@class, 'justify-between')]//a[contains(@class, 'underline') and @href="/invest/forget-password"]'.</msg>
 <arg>${forgotButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-14T17:38:52.028737" elapsed="0.034136"/>
+<status status="PASS" start="2025-07-14T17:51:53.690963" elapsed="0.033276"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-07-14T17:38:53.063299" level="INFO">Slept 1 second.</msg>
+<msg time="2025-07-14T17:51:54.726587" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-07-14T17:38:52.063000" elapsed="1.000439"/>
+<status status="PASS" start="2025-07-14T17:51:53.724361" elapsed="1.002316"/>
 </kw>
-<status status="PASS" start="2025-07-14T17:38:51.806474" elapsed="1.257111"/>
+<status status="PASS" start="2025-07-14T17:51:53.468524" elapsed="1.258256"/>
 </kw>
 <kw name="Input incorrect user" owner="Keyword">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-14T17:38:53.064317" level="INFO">Typing text 'cyptomind01@gmail.com' into text field '//input[contains(@name, 'email')]'.</msg>
+<msg time="2025-07-14T17:51:54.727319" level="INFO">Typing text 'cyptomind01@gmail.com' into text field '//input[contains(@name, 'email')]'.</msg>
 <arg>${usernamePath}</arg>
 <arg>${incorrectEmail}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-14T17:38:53.064104" elapsed="0.152426"/>
+<status status="PASS" start="2025-07-14T17:51:54.727174" elapsed="0.142351"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-07-14T17:38:53.216862" level="INFO">Clicking element '//button[contains(@type, 'submit') and contains(text(), 'ยืนยัน')]'.</msg>
+<msg time="2025-07-14T17:51:54.869780" level="INFO">Clicking element '//button[contains(@type, 'submit') and contains(text(), 'ยืนยัน')]'.</msg>
 <arg>${confirmUser}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-14T17:38:53.216652" elapsed="0.057643"/>
+<status status="PASS" start="2025-07-14T17:51:54.869647" elapsed="0.055047"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${userNotfound_path}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-07-14T17:38:53.274412" elapsed="0.439820"/>
+<status status="PASS" start="2025-07-14T17:51:54.924818" elapsed="0.654750"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-07-14T17:38:53.856052" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-14T17:51:55.734441" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-07-14T17:38:53.714485" elapsed="0.141643"/>
+<status status="PASS" start="2025-07-14T17:51:55.579862" elapsed="0.154654"/>
 </kw>
-<status status="PASS" start="2025-07-14T17:38:53.063837" elapsed="0.792359"/>
+<status status="PASS" start="2025-07-14T17:51:54.726955" elapsed="1.007623"/>
 </kw>
-<status status="PASS" start="2025-07-14T17:38:46.124465" elapsed="7.731875"/>
+<kw name="Move Png To Success Case" owner="manageFolder" type="TEARDOWN">
+<status status="PASS" start="2025-07-14T17:51:55.734785" elapsed="0.000472"/>
+</kw>
+<status status="PASS" start="2025-07-14T17:51:48.608942" elapsed="7.126403"/>
 </test>
-<test id="s1-t2" name="[Teardown]" line="14">
-<kw name="Move Png To Success Case" owner="manageFolder">
-<status status="PASS" start="2025-07-14T17:38:53.856750" elapsed="0.000306"/>
-</kw>
-<status status="PASS" start="2025-07-14T17:38:53.856560" elapsed="0.000605"/>
-</test>
-<status status="PASS" start="2025-07-14T17:38:45.982046" elapsed="7.875379"/>
+<status status="PASS" start="2025-07-14T17:51:48.470177" elapsed="7.265463"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="testCase" id="s1" pass="2" fail="0" skip="0">testCase</stat>
+<stat name="testCase" id="s1" pass="1" fail="0" skip="0">testCase</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-07-14T17:38:46.123376" level="WARN">Imported library '/Users/kwangncp/Documents/git/QA_Assignments/wrapper.py' contains no keywords.</msg>
+<msg time="2025-07-14T17:51:48.608047" level="WARN">Imported library '/Users/kwangncp/Documents/git/QA_Assignments/wrapper.py' contains no keywords.</msg>
 </errors>
 </robot>
