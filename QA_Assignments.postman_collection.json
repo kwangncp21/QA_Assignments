@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "8c701271-2c17-4655-bb15-4b6d65103be7",
+		"name": "QA_Assignments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13738643"
+	},
+	"item": [
+		{
+			"name": "accessWebsite",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"HTML contains expected title\", function () {",
+							"    const body = pm.response.text();",
+							"    pm.expect(body).to.include(\"Merkle Capital | ลงทุนอย่างมั่นใจใน Digital Asset.\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://merkle.capital",
+					"protocol": "https",
+					"host": [
+						"merkle",
+						"capital"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incorrect_uer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"cyptomind01@gmail.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend.merkle.capital/auth/request-reset-password",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"merkle",
+						"capital"
+					],
+					"path": [
+						"auth",
+						"request-reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"may_kwang_blue@hotmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		}
+	]
+}
