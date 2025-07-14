@@ -45,6 +45,24 @@
 		},
 		{
 			"name": "Incorrect_uer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							"",
+							"pm.test(\"Response body should be empty\", function () {",
+							"    pm.expect(pm.response.text()).to.eql(\"\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -74,7 +92,30 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "OTP request overload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 429\", function () {",
+							"    pm.response.to.have.status(429);",
+							"});",
+							"",
+							"pm.test(\"Error message is correct\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message).to.eql(\"ขอรหัส OTP ถี่เกินไป กรุณารอสักครู่แล้วขอใหม่อีกครั้ง\");",
+							"});",
+							"pm.test(\"Error type is 'Too Many Requests'\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.error).to.eql(\"Too Many Requests\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -86,6 +127,19 @@
 							"language": "json"
 						}
 					}
+				},
+				"url": {
+					"raw": "https://backend.merkle.capital/auth/request-reset-password",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"merkle",
+						"capital"
+					],
+					"path": [
+						"auth",
+						"request-reset-password"
+					]
 				}
 			},
 			"response": []
