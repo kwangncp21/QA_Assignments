@@ -1,5 +1,5 @@
 *.png
-manageFolder.py
-wrapper.py
+# manageFolder.py
+# wrapper.py
 success_case/
 README.md
