@@ -24,4 +24,3 @@ ${OTP_PopupError_path}    //div[contains(@class, 'Toastify')]//div[contains(@cla
 
 # ${OTP_PopupSuccess_path_DEL}    //div[contains(@class, 'Toastify')]//div[contains(@class, 'Toastify__toast-container Toastify__toast-container--top-right')]//div[contains(@class, 'Toastify__toast Toastify__toast--success')]//div[contains(@class, 'Toastify__toast-body') and contains(text(), 'ทำการส่ง OTP สำเร็จ')]
 
-# //div[contains(@class, 'Toastify')]//div[contains(@class, 'Toastify__toast-container Toastify__toast-container--top-right')]//div[contains(@class, 'Toastify__toast Toastify__toast--error')]//div[contains(@class, 'Toastify__toast-body') and contains(text(), 'ขอรหัส OTP ถี่เกินไป กรุณารอสักครู่แล้วขอใหม่อีกครั้ง')]

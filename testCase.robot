@@ -4,8 +4,6 @@ Resource   Keyword.robot
 Library    manageFolder.py
 
 *** Test Cases ***
-# TC01_Verify portal
-#    Access portal
 
 TC01_Verify forgot password function not allow permission for incorrect user
    Access portal
