@@ -5,7 +5,8 @@ Library    SeleniumLibrary
 
 # accessPortal
 ${browser}    chrome
-${url}    https://merkle.capital
+${url}    http://localhost:3001/
+
 ${close_popUp}    //*[contains(@class, 'flex items-center justify-center')]//button[contains(@class, 'items-center') and @type='button' and contains(text(), 'ปิด')]
 
  
