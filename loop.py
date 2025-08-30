@@ -36,7 +36,14 @@
 # print("จบการทำงาน")
 
 
-multiple = int(input("input your number: "))        #เเสดงเเม่สูตรคูณจากค่าที่รับมา
-print("number is: ",multiple)
-for digit in range(0,13):
-    print(multiple,"*",digit,"=",multiple*digit)
+# multiple = int(input("input your number: "))        #เเสดงเเม่สูตรคูณจากค่าที่รับมา
+# print("number is: ",multiple)
+# for digit in range(0,13):
+#     print(multiple,"*",digit,"=",multiple*digit)
+
+a= "10100011010111"
+count=0
+for digit in a:
+    if digit=="1":
+        count+=1
+print(count)
